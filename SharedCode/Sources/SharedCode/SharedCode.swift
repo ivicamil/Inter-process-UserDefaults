@@ -22,7 +22,6 @@ public extension UserDefaults {
         set {
             var colorData: Data? = nil
             if let color = newValue {
-                print("Encoding UIColor...")
                 colorData = NSKeyedArchiver.archivedData(withRootObject: color)
             }
             set(colorData, forKey: UserDefaults.colorKey)
