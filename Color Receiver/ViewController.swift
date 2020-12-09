@@ -17,4 +17,8 @@ class ViewController: UIViewController {
             self?.view.layer.backgroundColor = defaults.selectedColor?.cgColor
         }
     }
+    
+    deinit {
+        observation?.invalidate()
+    }
 }
